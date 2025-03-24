@@ -1,22 +1,22 @@
 import os
+
 from setuptools import setup
 
-with open(os.path.join(os.path.dirname(__file__),
-                       'VERSION')) as f:
+with open(os.path.join(os.path.dirname(__file__), "VERSION")) as f:
     version = f.read().strip()
 
 
 setup(
-    name='python-geoip-geolite2',
+    name="python-geoip-geolite2",
     version=version,
-    packages=['_geoip_geolite2'],
-    description='Provides access to the geolite2 database.  This product '
-        'includes GeoLite2 data created by MaxMind, available from '
-        'http://www.maxmind.com/',
-    install_requires=['python-geoip'],
+    packages=["_geoip_geolite2"],
+    description="Provides access to the geolite2 database.  This product "
+    "includes GeoLite2 data created by MaxMind, available from "
+    "http://www.maxmind.com/",
+    install_requires=["python-geoip-python3==1.3"],
     include_package_data=True,
     zip_safe=False,
     classifiers=[
-        'Programming Language :: Python',
+        "Programming Language :: Python",
     ],
 )
